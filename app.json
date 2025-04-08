@@ -1,0 +1,47 @@
+{
+    "name": "Sonic-MD",
+    "description": "Many Commands And Premium Feature.",
+    "repository": "https://github.com/Lil-Leoz/SONIC-MD1",
+    "logo": "https://raw.githubusercontent.com/Lil-Leoz/bot-help/refs/heads/main/IMG-20250407-WA0004.jpg",
+    "keywords": [
+        "nodejs",
+        "Bot",
+        "WhatsApp Bot",
+        "WhatsApp Automation",
+        "Multi Device"
+    ],
+    "env": {
+        "SESSION_ID": {
+            "description": "Type the Session-ID you got from scaning QR",
+            "required": true,
+            "value": ""
+        },
+        "HEROKU_API_KEY": {
+            "description": "Enter your heroku account api key",
+            "required": true,
+            "value": ""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Enter you pushed app Name",
+            "required": true,
+            "value": ""
+        },
+        "WORK_TYPE": {
+            "description": "Add the worktype of the Bot ( private , public , only_group )",
+            "required": true,
+            "value": "private"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        },
+        {
+            "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+        }
+    ],
+      "stack": "heroku-22"
+}
